@@ -11,14 +11,14 @@ describe('NFT', () => {
 
   const NAME = "AI Generated NFT"
   const SYMBOL = "AINFT"
-  const COST = tokens(1) // 1 ETH
+  const COST = tokens(0.1) // 0.1 ETH
   const URL = "https://ipfs.io/ipfs/bafyreid4an6ng6e6hok56l565eivozra3373bo6funw3p5mhq5oonew6u4/metadata.json"
 
   beforeEach(async () => {
     // Setup accounts
     [deployer, minter] = await ethers.getSigners()
 
-    // Deploy Real Estate
+    // Deploy
     const NFT = await ethers.getContractFactory('NFT')
     nft = await NFT.deploy(NAME, SYMBOL, COST)
 

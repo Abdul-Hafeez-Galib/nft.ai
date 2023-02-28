@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -12,11 +12,7 @@ contract NFT is ERC721URIStorage {
     address public owner;
     uint256 public cost;
 
-    constructor(
-        string memory _name,
-        string memory _symbol,
-        uint256 _cost
-    ) ERC721(_name, _symbol) {
+    constructor(string memory _name, string memory _symbol, uint256 _cost) ERC721(_name, _symbol) {
         owner = msg.sender;
         cost = _cost;
     }
